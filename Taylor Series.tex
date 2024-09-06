@@ -1,0 +1,67 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Mathematical and Numerical Methods for Biologists}
+\fancyhead[R]{BB 523}
+\fancyfoot[C]{\thepage}
+
+\title{Numerically computing derivatives,Taylor series,Newton-Raphson method}
+\author{}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\begin{enumerate}
+    % Taylor's Series Questions
+    \item \textbf{Taylor's Series}
+    \begin{enumerate}
+        \item Using Taylor's series, expand \( e^x \) till the 3rd order.
+        
+        \item Using Taylor's series, expand \( e^{-x} \) till the 3rd order.
+        
+        \item Using Taylor's series, expand \( -\cos(x) \) till the 3rd order.
+        
+        \item Evaluate the Taylor Series for \( f(x) = x^3 - 10x^2 + 6 \) at \( x = 3 \).
+        
+        \item Consider a simple population growth model where the population \( P(t) \) grows according to the exponential function \( P(t) = P_0 e^{rt} \), where \( P_0 \) is the initial population size, \( r \) is the growth rate, and \( t \) is time. Given \( P_0 = 100 \), \( r = 0.1 \), and \( t = 2 \), find the approximate population using the Taylor series.
+    \end{enumerate}
+
+    % Newton-Raphson Method Questions
+    \item \textbf{Newton-Raphson Method}
+    \begin{enumerate}
+        \item The equation \( x^3 - x^2 + 4x - 4 = 0 \) is to be solved using the Newton-Raphson method. If \( x = 2 \) is taken as the initial approximation, what will be the next approximation?
+
+        \item Solve the equation \( e^x - 1 = 0 \) using Newton's method with an initial guess \( x_0 = -1 \). Estimate \( x_1 \) of the solution.
+
+        \item The Newton-Raphson method is used to compute a root of the equation \( x^2 - 13 = 0 \), with an initial value of 3.5. What will be the approximation after one iteration?
+
+        \item Use the Newton-Raphson method to find the root of the function \( f(x) = x^2 - 2x \). Give values till \( x_3 \), starting from an initial value of \( x_0 = 1.5 \).
+
+        \item The Newton-Raphson method is used to find the roots of the equation \( x^3 + 2x^2 + 3x - 1 = 0 \). If the initial guess is \( x_0 = 1 \), what is the value of \( x \) after the second iteration?
+    \end{enumerate}
+
+    % Numerically Computing Derivatives Questions
+    \item \textbf{Numerically Computing Derivatives}
+    \begin{enumerate}
+        \item Consider a population \( P(t) \) that grows exponentially according to the equation \( P(t) = P_0 e^{rt} \), where \( P_0 = 100 \) (initial population), \( r = 0.1 \), and \( t \) is time. Find the rate of population growth \( P'(t) \) at \( t = 2 \) using numerical differentiation methods.
+        \begin{enumerate}
+            \item Use forward difference approximation.
+            \item Use backward difference approximation.
+            \item Use central difference approximation.
+        \end{enumerate}
+
+        \item Use the forward difference approximation to find the derivative of the function \( f(x) = x^2 - 2x \) at \( x_0 = 1.5 \). Give the value of \( f'(x) \).
+    \end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}
