@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Mathematical and Numerical Methods for Biologists}
+\fancyhead[R]{BB 523}
+\fancyfoot[C]{\thepage}
+
+\title{Practice Questions in Differentiation}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\begin{enumerate}[itemsep=20pt]
+
+    % Basic Gradient and Derivative Questions
+    \item Consider the function \( f(x, y) = 3x^2 + 4xy + 2y^2 \).
+    \begin{enumerate}[label=(\alph*), itemsep=10pt]
+        \item Find the gradient vector \( \nabla f \) at the point \( (1, 2) \).
+        \item Interpret the gradient in terms of the direction of the steepest ascent.
+    \end{enumerate}
+    
+    \item Use the limit definition of the derivative to find the derivative of \( h(x) = \sqrt{x} \) at \( x = 4 \).
+    
+    \item For each of the following functions, find the derivative using the definition of the derivative:
+    \begin{enumerate}[label=(\alph*), itemsep=10pt]
+        \item \( f(x) = x^3 \)
+        \item \( F(x) = x^2 \)
+        \item \( f(x) = 2x + 3 \)
+        \item \( f(x) = 5x - 7 \)
+        \item \( f(x) = x^3 - 2x^2 + x - 8 \)
+    \end{enumerate}
+    
+    % Intermediate Questions on Minima/Maxima
+    \item Find the local minima and maxima of the function \( f(x) = x^3 - 6x^2 + 9x + 1 \) using derivatives.
+    
+    \item Determine the critical points and classify them (as minima, maxima, or saddle points) for the function \( f(x) = x^4 - 4x^3 + 4x^2 \).
+    
+    \item Find the points of minima and maxima for \( f(x) = \sin(x) + \cos(x) \) in the interval \( [0, 2\pi] \).
+    
+    \item Using derivatives, find the local extrema of the function \( f(x) = \frac{1}{3}x^3 - 2x^2 + 3x \).
+    
+    \item Determine the minima and maxima for \( f(x) = x^2 + \frac{4}{x} \) for \( x > 0 \).
+    
+    \item Find the maximum and minimum values of the function \( f(x) = x - \ln(x) \) for \( x > 0 \).
+
+    % More Complex Applications and Analysis
+    \item The population of a species is modeled by the function \( P(t) = P_0 e^{rt} \), where \( P_0 \) is the initial population, \( r \) is the growth rate, and \( t \) is time.
+    \begin{enumerate}[label=(\alph*), itemsep=10pt]
+        \item Find the rate of population growth at any time \( t \).
+        \item Determine the time at which the population growth rate is maximized.
+    \end{enumerate}
+
+    \item The spread of a disease is modeled by \( I(t) = \frac{1000}{1 + 9e^{-0.5t}} \), where \( I(t) \) is the number of infected individuals at time \( t \).
+    \begin{enumerate}[label=(\alph*), itemsep=10pt]
+        \item Find the rate of change of the number of infected individuals at any time \( t \).
+        \item Determine the time at which the infection rate is highest.
+    \end{enumerate}
+    
+    \item Suppose the rate of an enzyme-catalyzed reaction is given by \( v(S) = \frac{V_{\max}S}{K_m + S} \), where \( S \) is the substrate concentration, \( V_{\max} \) is the maximum reaction rate, and \( K_m \) is the Michaelis constant.
+    \begin{enumerate}[label=(\alph*), itemsep=10pt]
+        \item Find the derivative \( \frac{dv}{dS} \).
+        \item What does this derivative represent biologically?
+    \end{enumerate}
+
+    \item Consider a dataset where blood pressure \( B(t) \) is a function of time \( t \). Suppose \( B(t) = 120 + 10\sin(0.5t) \).
+    \begin{enumerate}[label=(\alph*), itemsep=10pt]
+        \item Compute the rate of change of blood pressure with respect to time.
+        \item At what time \( t \) is the blood pressure increasing the fastest?
+    \end{enumerate}
+
+    \item For the function \( g(x) = x^4 - 4x^3 + 6x^2 \), find the critical points and determine whether they are maxima, minima, or points of inflection. Sketch the function based on this analysis.
+
+    % Sketching Derivatives
+    \item For each of the following functions, sketch the derivative \( f'(x) \):
+    \begin{enumerate}[label=(\alph*), itemsep=10pt]
+        \item \( f(x) = x^3 - 3x \)
+        \item \( f(x) = \sin(x) \)
+        \item \( f(x) = e^x \)
+        \item \( f(x) = \ln(x) \) for \( x > 0 \)
+        \item \( f(x) = |x| \)
+    \end{enumerate}
+
+    % Conceptual and Advanced Questions
+    \item Evaluate the limit \( \lim_{x \to 0^+} \frac{|x|}{x} \) and discuss whether the derivative of the function exists at \( x = 0 \).
+
+    \item Prove that if a function \( f(x) \) is differentiable at \( x = a \), then \( f(x) \) must be continuous at \( x = a \). Provide an example to illustrate this concept.
+
+    \item Consider the piecewise function \( f(x) = 
+    \begin{cases} 
+    x^2 & \text{if } x < 1 \\
+    2x & \text{if } x \geq 1 
+    \end{cases} \).
+    Determine whether \( f(x) \) is differentiable at \( x = 1 \). Explain your reasoning.
+
+    \item Analyze the function \( f(x) = |x - 1| \). Discuss why the derivative does not exist at \( x = 1 \).
+
+    \item Consider the function \( f(x) = x^{1/3} \).
+    \begin{enumerate}[label=(\alph*), itemsep=10pt]
+        \item Find the derivative of the function.
+        \item Discuss the behavior of the derivative near \( x = 0 \) and explain why the tangent line is vertical at \( x = 0 \).
+    \end{enumerate}
+
+    \item A certain drug's effectiveness is modeled by \( E(d) = d(10 - d) \), where \( d \) is the dosage.
+    \begin{enumerate}[label=(\alph*), itemsep=10pt]
+        \item Find the dosage that maximizes the drug's effectiveness.
+        \item Use the second derivative test to confirm whether this dosage is a maximum.
+    \end{enumerate}
+
+    \item Consider the function \( f(x) = \sqrt{x^2 - 8} \).
+    \begin{enumerate}[label=(\alph*), itemsep=10pt]
+        \item Find the critical points of the function.
+        \item Determine whether these critical points correspond to a maximum or minimum.
+        \item Sketch the graph of the function and indicate the points of maxima and minima.
+    \end{enumerate}
+    
+\end{enumerate}
+
+\end{document}
