@@ -1,0 +1,131 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Mathematical and Numerical Methods for Biologists}
+\fancyhead[R]{BB 523}
+\fancyfoot[C]{\thepage}
+
+\title{Practice Questions on Integration}
+\author{}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\begin{enumerate}
+
+    \item Evaluate each of the following indefinite integrals:
+
+\begin{enumerate}
+    \item \( \int \left( 6x^5 - 18x^2 + 7 \right) \, dx \)
+    \item \( \int \left( 12t^7 - t^2 - t + 3 \right) \, dt \)
+    \item \(\int \left( 2 \cos(w) - \sec(w) \tan(w) \right) \, dw\)
+\end{enumerate}
+
+    \item Determine \( h(t) \) given that \( h'(t) = t^4 - t^3 + t^2 + t - 1 \).
+    \item Determine \( f(x) \) given that \( f'(x) = 12x^2 - 4x \) and \( f(-3) = 17 \).
+    \item Determine \( h(t) \) given that \( h''(t) = 24t^2 - 48t + 2 \), \( h(1) = -9 \), and \( h(-2) = -4 \).
+    
+    
+    \item Determine the area below \( f(x) = 3 + 2x - x^2 \) and above the x-axis.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\linewidth]{image2.png}
+
+    \end{figure}
+    
+    
+    \item Evaluate the integral \( \int 3t^{-4} (2 + 4t^{-3})^{-7} \, dt \).
+    \item Evaluate the integral \( \int_{-3}^{4} \left( \cos(x) - \frac{3}{x^5} \right) \, dx \).
+    \item Evaluate the integral \( \int_{1}^{6} \left( 12x^3 - 9x^2 + 2 \right) \, dx \).
+    \item Evaluate the integral \( \int_{-4}^{-1} x^2 (3 - 4x) \, dx \).
+
+    
+    \item Find the value of \( \int 2x \cos(x^2 - 5) \, dx \).
+\newpage
+    \item Determine the area of the region bounded by the given set of curves:
+    \begin{itemize}
+        \item \( y = x^2 + 2 \)
+        \item \( y = \sin(x) \)
+        \item \( x = -1 \)
+        \item \( x = 2 \)
+    \end{itemize}
+
+    \item Determine the area to the left of \( g(y) = 3 - y^2 \) and to the right of \( x = -1 \).
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\linewidth]{image.png}
+
+    \end{figure}
+    \item Determine the area of the region bounded by the curves \( y = 1/( x + 2) \), \( y = (x+2)^2 \), and the vertical lines \( x = -\frac{3}{2} \) and \( x = 1 \)
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\linewidth]{image3.png}
+    \end{figure}
+
+    \item Determine the area of the region bounded by \( y = \frac{8}{x} \), \( y = 2x \), and \( x = 4 \).
+    \item Find the value of \( \int (\cos x + x) \, dx \).
+    \item Find the value of \( \int \left( x e + e^x + e^e \right) \, dx \).
+    \item Evaluate the integral \( \int x e^x \, dx \).
+    \item Evaluate the integral \( \int \sqrt{x^2 - a^2} \, dx \).
+    \item Evaluate the integral \( \int \frac{e^{\tan^{-1}(x)}}{1 + x^2} \, dx \).
+    \item Integrate \( 2x \cos(x^2 - 5) \) with respect to \( x \).
+    \item Evaluate the integral \( \int x \sqrt{x^2 + 1} \, dx \).
+    \item Evaluate the integral \( \int x^4 \ln(x) \, dx \).
+    \item Evaluate the integral \( \int \frac{x}{x^2 - 1} \, dx \).
+
+
+    
+
+
+
+    \item Suppose a population grows according to the function \( P(t) = P_0 e^{rt} \), where \( P_0 \) is the initial population and \( r \) is the growth rate. Find the total population increase from \( t = 0 \) to \( t = T \):
+    \[
+    \int_{0}^{T} P_0 e^{rt} \, dt
+    \]
+    
+    \item Consider a substance whose concentration decays over time according to \( C(t) = C_0 e^{-kt} + t \). Find the total concentration of the substance from \( t = 0 \) to \( t = T \):
+    \[
+    \int_{0}^{T} \left( C_0 e^{-kt} + t \right) \, dt
+    \]
+    
+    \item Suppose the rate of biomass production is given by \( B(t) = a t^2 + b t \), where \( a \) and \( b \) are constants. Determine the total biomass produced from \( t = 0 \) to \( t = T \):
+    \[
+    \int_{0}^{T} \left( a t^2 + b t \right) \, dt
+    \]
+    
+    \item The concentration of a drug in the bloodstream decreases according to \( C(t) = \frac{C_0}{1 + k t} \), where \( C_0 \) and \( k \) are constants. Find the total drug exposure from \( t = 0 \) to \( t = T \):
+    \[
+    \int_{0}^{T} \frac{C_0}{1 + k t} \, dt
+    \]
+
+
+
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+\end{document}
