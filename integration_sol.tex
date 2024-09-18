@@ -1,0 +1,1059 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{enumitem}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Mathematical and Numerical Methods for Biologists}
+\fancyhead[R]{BB 523}
+\fancyfoot[C]{\thepage}
+
+\title{Integration Solutions}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\section*{1.}
+
+\begin{enumerate}
+
+\item \(\int \left( 6x^5 - 18x^2 + 7 \right) \, dx\)
+
+We integrate term by term:
+
+\[
+\int \left( 6x^5 - 18x^2 + 7 \right) \, dx = \frac{6x^6}{6} - \frac{18x^3}{3} + 7x + C_1
+\]
+
+Simplifying:
+
+\[
+x^6 - 6x^3 + 7x + C_1
+\]
+
+\item \(\int \left( 12t^7 - t^2 - t + 3 \right) \, dt\)
+
+Again, integrating term by term:
+
+\[
+\int \left( 12t^7 - t^2 - t + 3 \right) \, dt = \frac{12t^8}{8} - \frac{t^3}{3} - \frac{t^2}{2} + 3t + C_2
+\]
+
+Simplifying:
+
+\[
+\frac{3t^8}{2} - \frac{t^3}{3} - \frac{t^2}{2} + 3t + C_2
+\]
+
+\item \(\int \left( 2 \cos(w) - \sec(w) \tan(w) \right) \, dw\)
+
+We integrate each term separately:
+
+\[
+\int 2 \cos(w) \, dw = 2 \sin(w)
+\]
+\[
+\int - \sec(w) \tan(w) \, dw = - \sec(w)
+\]
+
+Thus, the solution is:
+
+\[
+2 \sin(w) - \sec(w) + C_3
+\]
+
+\end{enumerate}
+
+\section*{2.}
+
+We are given \( h'(t) = t^4 - t^3 + t^2 + t - 1 \), so we integrate:
+
+\[
+h(t) = \int \left( t^4 - t^3 + t^2 + t - 1 \right) \, dt
+\]
+\[
+h(t) = \frac{t^5}{5} - \frac{t^4}{4} + \frac{t^3}{3} + \frac{t^2}{2} - t + C_4
+\]
+
+\section*{3.}
+
+We are given \( f'(x) = 12x^2 - 4x \) and \( f(-3) = 17 \).
+
+First, we integrate \( f'(x) \):
+
+\[
+f(x) = \int (12x^2 - 4x) \, dx = \frac{12x^3}{3} - \frac{4x^2}{2} + C_5
+\]
+\[
+f(x) = 4x^3 - 2x^2 + C_5
+\]
+
+Next, use the condition \( f(-3) = 17 \) to solve for \( C_5 \):
+
+\[
+f(-3) = 4(-3)^3 - 2(-3)^2 + C_5 = 17
+\]
+\[
+f(-3) = 4(-27) - 2(9) + C_5 = 17
+\]
+\[
+-108 - 18 + C_5 = 17
+\]
+\[
+C_5 = 143
+\]
+
+Thus, the function is:
+
+\[
+f(x) = 4x^3 - 2x^2 + 143
+\]
+
+\section*{4.}
+
+We are given \( h''(t) = 24t^2 - 48t + 2 \), \( h(1) = -9 \), and \( h(-2) = -4 \).
+
+First, integrate \( h''(t) \) to get \( h'(t) \):
+
+\[
+h'(t) = \int (24t^2 - 48t + 2) \, dt = 8t^3 - 24t^2 + 2t + C_6
+\]
+
+Next, integrate \( h'(t) \) to get \( h(t) \):
+
+\[
+h(t) = \int (8t^3 - 24t^2 + 2t + C_6) \, dt = 2t^4 - 8t^3 + t^2 + C_6t + C_7
+\]
+
+We now use the conditions \( h(1) = -9 \) and \( h(-2) = -4 \) to solve for \( C_6 \) and \( C_7 \).
+
+First, substitute \( t = 1 \) into \( h(t) \):
+
+\[
+h(1) = 2(1)^4 - 8(1)^3 + (1)^2 + C_6(1) + C_7 = -9
+\]
+\[
+2 - 8 + 1 + C_6 + C_7 = -9
+\]
+\[
+C_6 + C_7 = -4
+\]
+
+Now, substitute \( t = -2 \) into \( h(t) \):
+
+\[
+h(-2) = 2(-2)^4 - 8(-2)^3 + (-2)^2 + C_6(-2) + C_7 = -4
+\]
+\[
+2(16) - 8(-8) + 4 - 2C_6 + C_7 = -4
+\]
+\[
+32 + 64 + 4 - 2C_6 + C_7 = -4
+\]
+\[
+100 - 2C_6 + C_7 = -4
+\]
+\[
+-2C_6 + C_7 = -104
+\]
+
+We now solve the system of equations:
+\[
+\begin{aligned}
+C_6 + C_7 &= -4 \\
+-2C_6 + C_7 &= -104
+\end{aligned}
+\]
+
+Subtract the first equation from the second:
+
+\[
+(-2C_6 + C_7) - (C_6 + C_7) = -104 - (-4)
+\]
+\[
+-3C_6 = -100
+\]
+\[
+C_6 = \frac{100}{3}
+\]
+
+Substitute into \( C_6 + C_7 = -4 \):
+
+\[
+\frac{100}{3} + C_7 = -4
+\]
+\[
+C_7 = -4 - \frac{100}{3} = \frac{-12 - 100}{3} = \frac{-112}{3}
+\]
+
+Thus, the function \( h(t) \) is:
+
+\[
+h(t) = 2t^4 - 8t^3 + t^2 + \frac{100}{3}t - \frac{112}{3}
+\]
+
+\section*{5.}
+
+We are given \( f(x) = 3 + 2x - x^2 \) and need to find the area below the curve and above the x-axis.
+
+First, we find the points where the curve intersects the x-axis by solving \( 3 + 2x - x^2 = 0 \).
+
+Rearrange the equation:
+
+\[
+-x^2 + 2x + 3 = 0
+\]
+\[
+x^2 - 2x - 3 = 0
+\]
+\[
+(x - 3)(x + 1) = 0
+\]
+
+Thus, \( x = 3 \) and \( x = -1 \). The area is the integral of \( f(x) \) from \( -1 \) to \( 3 \):
+
+\[
+\text{Area} = \int_{-1}^{3} (3 + 2x - x^2) \, dx
+\]
+
+First, compute the indefinite integral:
+
+\[
+\int (3 + 2x - x^2) \, dx = 3x + x^2 - \frac{x^3}{3}
+\]
+
+Now, evaluate from \( -1 \) to \( 3 \):
+
+\[
+\left[ 3x + x^2 - \frac{x^3}{3} \right]_{-1}^{3}
+\]
+\[
+= \left( 3(3) + (3)^2 - \frac{(3)^3}{3} \right) - \left( 3(-1) + (-1)^2 - \frac{(-1)^3}{3} \right)
+\]
+\[
+= \left( 9 + 9 - \frac{27}{3} \right) - \left( -3 + 1 + \frac{1}{3} \right)
+\]
+\[
+= \left( 9 \right) - \left( -2 + \frac{1}{3} \right)
+\]
+\[
+= 9 + 2 - \frac{1}{3} = 11 - \frac{1}{3} = \frac{33}{3} - \frac{1}{3} = \frac{32}{3}
+\]
+
+Thus, the area is \( \frac{32}{3} \).
+
+
+
+\section*{6.}
+
+ Evaluate \( \int 3t^{-4} (2 + 4t^{-3})^{-7} \, dt \)
+
+Let \( u = 2 + 4t^{-3} \), so that \( du = -12t^{-4} \, dt \).
+
+Thus, we rewrite the integral:
+
+\[
+\int 3t^{-4} (2 + 4t^{-3})^{-7} \, dt = \int 3 \cdot \frac{du}{-12} \cdot u^{-7}
+\]
+
+\[
+= -\frac{1}{4} \int u^{-7} \, du = -\frac{1}{4} \cdot \frac{u^{-6}}{-6} = \frac{1}{24} u^{-6} + C
+\]
+
+Substitute \( u = 2 + 4t^{-3} \) back:
+
+\[
+= \frac{1}{24} (2 + 4t^{-3})^{-6} + C
+\]
+\section*{7.}
+Evaluate \( \int_{-3}^{4} \left( \cos(x) - \frac{3}{x^5} \right) \, dx \)
+
+We can split the integral into two parts:
+
+\[
+\int_{-3}^{4} \left( \cos(x) - \frac{3}{x^5} \right) \, dx = \int_{-3}^{4} \cos(x) \, dx - \int_{-3}^{4} \frac{3}{x^5} \, dx
+\]
+
+The first integral is straightforward:
+
+\[
+\int_{-3}^{4} \cos(x) \, dx = \sin(4) - \sin(-3)
+\]
+
+The second integral is improper at \( x = 0 \), and since the function \( \frac{3}{x^5} \) is odd, it evaluates to 0 over the symmetric limits. Therefore, the integral becomes:
+
+\[
+= \sin(4) - \sin(-3)
+\]
+\section*{8.}
+Evaluate \( \int_{1}^{6} \left( 12x^3 - 9x^2 + 2 \right) \, dx \)
+
+First, find the indefinite integral:
+
+\[
+\int \left( 12x^3 - 9x^2 + 2 \right) \, dx = \frac{12x^4}{4} - \frac{9x^3}{3} + 2x = 3x^4 - 3x^3 + 2x
+\]
+
+Now, evaluate from 1 to 6:
+
+\[
+\left[ 3x^4 - 3x^3 + 2x \right]_{1}^{6} = \left( 3(6)^4 - 3(6)^3 + 2(6) \right) - \left( 3(1)^4 - 3(1)^3 + 2(1) \right)
+\]
+
+\[
+= (3888 - 648 + 12) - (3 - 3 + 2) = 3252 - 2 = 3250
+\]
+\section*{9.}
+Evaluate \( \int_{-4}^{-1} x^2 (3 - 4x) \, dx \)
+
+First, expand the integrand:
+
+\[
+x^2 (3 - 4x) = 3x^2 - 4x^3
+\]
+
+Now, find the indefinite integral:
+
+\[
+\int \left( 3x^2 - 4x^3 \right) \, dx = x^3 - x^4
+\]
+
+Now, evaluate from \( -4 \) to \( -1 \):
+
+\[
+\left[ x^3 - x^4 \right]_{-4}^{-1} = \left( (-1)^3 - (-1)^4 \right) - \left( (-4)^3 - (-4)^4 \right)
+\]
+
+\[
+= (-1 - 1) - (-64 - 256) = -2 - (-320) = 318
+\]
+\section*{10.}
+ Find \( \int 2x \cos(x^2 - 5) \, dx \)
+
+Let \( u = x^2 - 5 \), so that \( du = 2x \, dx \).
+
+Thus, the integral becomes:
+
+\[
+\int 2x \cos(x^2 - 5) \, dx = \int \cos(u) \, du = \sin(u) + C
+\]
+
+Substitute back \( u = x^2 - 5 \):
+
+\[
+= \sin(x^2 - 5) + C
+\]
+
+\end{enumerate}
+
+
+\section*{11.}
+
+We are tasked with finding the area of the region bounded by the curves \( y = x^2 + 2 \) (upper function) and \( y = \sin(x) \) (lower function) over the interval \( -1 \leq x \leq 2 \).
+
+First, we note that the curves do not intersect in the given interval. This is verified by inspecting the graph of the functions, ensuring we can compute the area using a single integral.
+
+The area \( A \) is given by the integral of the difference between the upper and lower functions:
+
+\[
+A = \int_{-1}^{2} \left( (x^2 + 2) - \sin(x) \right) \, dx
+\]
+
+We now evaluate this integral. Begin by splitting the integral into two parts:
+
+\[
+A = \int_{-1}^{2} \left( x^2 + 2 \right) \, dx - \int_{-1}^{2} \sin(x) \, dx
+\]
+
+The first integral is straightforward:
+
+\[
+\int_{-1}^{2} \left( x^2 + 2 \right) \, dx = \left( \frac{x^3}{3} + 2x \right) \Bigg|_{-1}^{2}
+\]
+
+\[
+= \left( \frac{2^3}{3} + 2(2) \right) - \left( \frac{(-1)^3}{3} + 2(-1) \right)
+\]
+
+\[
+= \left( \frac{8}{3} + 4 \right) - \left( -\frac{1}{3} - 2 \right)
+\]
+
+\[
+= \left( \frac{8}{3} + \frac{12}{3} \right) - \left( -\frac{1}{3} - \frac{6}{3} \right)
+\]
+
+\[
+= \frac{20}{3} - \left( -\frac{7}{3} \right) = \frac{20}{3} + \frac{7}{3} = \frac{27}{3} = 9
+\]
+
+Now for the second integral:
+
+\[
+\int_{-1}^{2} \sin(x) \, dx = -\cos(x) \Bigg|_{-1}^{2}
+\]
+
+\[
+= -\cos(2) + \cos(-1) = -\cos(2) + \cos(1)
+\]
+
+Thus, the total area is:
+
+\[
+A = 9 + \left( \cos(1) - \cos(2) \right)
+\]
+
+Finally, using a calculator (set to radians), we approximate:
+
+\[
+A \approx 9 + 0.5403 - (-0.4161) = 9 + 0.5403 + 0.4161 = 8.04355
+\]
+
+Hence, the area of the bounded region is approximately:
+
+\[
+A \approx 8.04355
+\]
+
+
+\section*{12.}
+
+We want to find the area of the region bounded by the curves \( x = 3 - y^2 \) and \( x = -1 \).
+
+
+
+To determine the limits for \( y \), we need to find the intersection points of the curves. Set the equations equal to find the intersection points:
+
+\[
+3 - y^2 = -1
+\]
+
+Solving for \( y \):
+
+\[
+3 - y^2 = -1
+\]
+
+\[
+y^2 = 4
+\]
+
+\[
+y = \pm 2
+\]
+
+So, the limits for \( y \) are \( -2 \leq y \leq 2 \).
+
+
+To find the area between the curves, integrate the difference between the right function \( x = 3 - y^2 \) and the left function \( x = -1 \):
+
+\[
+A = \int_{-2}^{2} \left[ (3 - y^2) - (-1) \right] \, dy
+\]
+
+\[
+= \int_{-2}^{2} \left( 3 - y^2 + 1 \right) \, dy
+\]
+
+\[
+= \int_{-2}^{2} \left( 4 - y^2 \right) \, dy
+\]
+
+
+
+Now evaluate the integral:
+
+\[
+A = \int_{-2}^{2} \left( 4 - y^2 \right) \, dy
+\]
+
+Split the integral:
+
+\[
+A = \int_{-2}^{2} 4 \, dy - \int_{-2}^{2} y^2 \, dy
+\]
+
+Evaluate each integral separately:
+
+\[
+\int_{-2}^{2} 4 \, dy = 4y \Big|_{-2}^{2} = 4(2) - 4(-2) = 8 + 8 = 16
+\]
+
+\[
+\int_{-2}^{2} y^2 \, dy = \frac{y^3}{3} \Big|_{-2}^{2} = \frac{2^3}{3} - \frac{(-2)^3}{3} = \frac{8}{3} - \left(-\frac{8}{3}\right) = \frac{16}{3}
+\]
+
+Combining these results:
+
+\[
+A = 16 - \frac{16}{3}
+\]
+
+\[
+= \frac{48}{3} - \frac{16}{3} = \frac{32}{3}
+\]
+
+Thus, the area of the bounded region is:
+
+\[
+A = \frac{32}{3}
+\]
+
+\section*{13.}
+
+We need to find the area of the region bounded by the curves \( y = \frac{1}{x + 2} \) and \( y = (x + 2)^2 \). 
+
+
+
+
+
+We need to compute the area between the curves in two ranges. The integrals are:
+
+\[
+A = \int_{-\frac{3}{2}}^{-1} \left[ \frac{1}{x + 2} - (x + 2)^2 \right] \, dx + \int_{-1}^{1} \left[ (x + 2)^2 - \frac{1}{x + 2} \right] \, dx
+\]
+
+
+
+Evaluate each integral separately.
+
+**First Integral:**
+
+\[
+\int_{-\frac{3}{2}}^{-1} \left[ \frac{1}{x + 2} - (x + 2)^2 \right] \, dx
+\]
+
+\[
+= \int_{-\frac{3}{2}}^{-1} \frac{1}{x + 2} \, dx - \int_{-\frac{3}{2}}^{-1} (x + 2)^2 \, dx
+\]
+
+Evaluate:
+
+\[
+\int_{-\frac{3}{2}}^{-1} \frac{1}{x + 2} \, dx = \ln |x + 2| \Bigg|_{-\frac{3}{2}}^{-1}
+\]
+
+\[
+= \ln \left| -1 + 2 \right| - \ln \left| -\frac{3}{2} + 2 \right|
+\]
+
+\[
+= \ln 1 - \ln \frac{1}{2} = 0 - (-\ln 2) = \ln 2
+\]
+
+\[
+\int_{-\frac{3}{2}}^{-1} (x + 2)^2 \, dx = \frac{1}{3} (x + 2)^3 \Bigg|_{-\frac{3}{2}}^{-1}
+\]
+
+\[
+= \frac{1}{3} \left[ (1)^3 - \left( \frac{1}{2} \right)^3 \right]
+\]
+
+\[
+= \frac{1}{3} \left[ 1 - \frac{1}{8} \right] = \frac{1}{3} \times \frac{7}{8} = \frac{7}{24}
+\]
+
+Thus, the first integral:
+
+\[
+\int_{-\frac{3}{2}}^{-1} \left[ \frac{1}{x + 2} - (x + 2)^2 \right] \, dx = \ln 2 - \frac{7}{24}
+\]
+
+**Second Integral:**
+
+\[
+\int_{-1}^{1} \left[ (x + 2)^2 - \frac{1}{x + 2} \right] \, dx
+\]
+
+\[
+= \int_{-1}^{1} (x + 2)^2 \, dx - \int_{-1}^{1} \frac{1}{x + 2} \, dx
+\]
+
+Evaluate:
+
+\[
+\int_{-1}^{1} (x + 2)^2 \, dx = \frac{1}{3} (x + 2)^3 \Bigg|_{-1}^{1}
+\]
+
+\[
+= \frac{1}{3} \left[ (3)^3 - (1)^3 \right]
+\]
+
+\[
+= \frac{1}{3} \left[ 27 - 1 \right] = \frac{26}{3}
+\]
+
+\[
+\int_{-1}^{1} \frac{1}{x + 2} \, dx = \ln |x + 2| \Bigg|_{-1}^{1}
+\]
+
+\[
+= \ln \left| 3 \right| - \ln \left| 1 \right| = \ln 3
+\]
+
+Thus, the second integral:
+
+\[
+\int_{-1}^{1} \left[ (x + 2)^2 - \frac{1}{x + 2} \right] \, dx = \frac{26}{3} - \ln 3
+\]
+
+**Combine Results:**
+
+\[
+A = \left[ \ln 2 - \frac{7}{24} \right] + \left[ \frac{26}{3} - \ln 3 \right]
+\]
+
+\[
+= \frac{26}{3} - \frac{7}{24} + \ln 2 - \ln 3
+\]
+
+Simplify:
+
+\[
+\frac{26}{3} - \frac{7}{24} = \frac{208 - 7}{24} = \frac{201}{24}
+\]
+
+Thus:
+
+\[
+A = \frac{201}{24} + \ln \frac{2}{3} \approx 8.375 - \ln 1.5 = 7.9695
+\]
+
+\section*{14.}
+
+To find the area between the curves \( y = 2x \) and \( y = \frac{8}{x} \) from \( x = 2 \) to \( x = 4 \), we set up the integral as follows:
+
+\[
+A = \int_{2}^{4} \left(2x - \frac{8}{x}\right) \, dx
+\]
+
+Evaluate the integral:
+
+\[
+\int_{2}^{4} \left(2x - \frac{8}{x}\right) \, dx = \left[x^2 - 8 \ln|x|\right]_{2}^{4}
+\]
+
+Substitute the limits into the antiderivative:
+
+\[
+\left(4^2 - 8 \ln|4|\right) - \left(2^2 - 8 \ln|2|\right)
+\]
+
+Simplify:
+
+\[
+\left(16 - 8 \ln 4\right) - \left(4 - 8 \ln 2\right)
+\]
+\[
+= 12 - 8 \left(\ln 4 - \ln 2\right)
+\]
+\[
+= 12 - 8 \ln \frac{4}{2}
+\]
+\[
+= 12 - 8 \ln 2
+\]
+
+Using \(\ln 2 \approx 0.693\):
+
+\[
+= 12 - 8 \times 0.693
+\]
+\[
+\approx 12 - 5.544
+\]
+\[
+\approx 6.456
+\]
+
+
+\section*{15.}
+
+    \[
+\int (\cos x + x) \, dx = \int \cos x \, dx + \int x \, dx
+\]
+
+\[
+= \sin x + \frac{x^2}{2} + C
+\]
+
+\section*{16.}
+
+\[
+\int \left( x e + e^x + e^e \right) \, dx = e \int x \, dx + \int e^x \, dx + e^e \int 1 \, dx
+\]
+
+\[
+= e \cdot \frac{x^2}{2} + e^x + e^e x + C
+\]
+
+\section*{17.}
+
+Use integration by parts with \( u = x \) and \( dv = e^x \, dx \):
+
+\[
+\int x e^x \, dx = x e^x - \int e^x \, dx = x e^x - e^x + C
+\]
+
+\[
+= (x - 1) e^x + C
+\]
+
+
+\section*{18.}
+
+Consider the integral:
+\[
+I = \int \sqrt{x^2 - a^2} \, dx
+\]
+
+We use integration by parts. Let:
+\[
+u = \sqrt{x^2 - a^2} \quad \text{and} \quad dv = dx
+\]
+Then:
+\[
+du = \frac{x}{\sqrt{x^2 - a^2}} \, dx \quad \text{and} \quad v = x
+\]
+
+Applying integration by parts:
+\[
+I = x \sqrt{x^2 - a^2} - \int x \cdot \frac{x}{\sqrt{x^2 - a^2}} \, dx
+\]
+\[
+I = x \sqrt{x^2 - a^2} - \int \frac{x^2}{\sqrt{x^2 - a^2}} \, dx
+\]
+
+We simplify the remaining integral:
+\[
+\int \frac{x^2}{\sqrt{x^2 - a^2}} \, dx
+\]
+
+Rewrite \(x^2\) as \( (x^2 - a^2) + a^2 \):
+\[
+\int \frac{x^2}{\sqrt{x^2 - a^2}} \, dx = \int \frac{(x^2 - a^2) + a^2}{\sqrt{x^2 - a^2}} \, dx
+\]
+\[
+= \int \frac{x^2 - a^2}{\sqrt{x^2 - a^2}} \, dx + \int \frac{a^2}{\sqrt{x^2 - a^2}} \, dx
+\]
+\[
+= \int \sqrt{x^2 - a^2} \, dx + a^2 \int \frac{1}{\sqrt{x^2 - a^2}} \, dx
+\]
+
+Substitute this back into our expression for \(I\):
+\[
+I = x \sqrt{x^2 - a^2} - \left( \int \sqrt{x^2 - a^2} \, dx + a^2 \int \frac{1}{\sqrt{x^2 - a^2}} \, dx \right)
+\]
+\[
+I = x \sqrt{x^2 - a^2} - \int \sqrt{x^2 - a^2} \, dx - a^2 \int \frac{1}{\sqrt{x^2 - a^2}} \, dx
+\]
+
+Solving for \( \int \sqrt{x^2 - a^2} \, dx \):
+\[
+2 \int \sqrt{x^2 - a^2} \, dx = x \sqrt{x^2 - a^2} - a^2 \int \frac{1}{\sqrt{x^2 - a^2}} \, dx
+\]
+
+The remaining integral can be solved as:
+\[
+\int \frac{1}{\sqrt{x^2 - a^2}} \, dx = \ln \left| x + \sqrt{x^2 - a^2} \right| + C
+\]
+
+Thus:
+\[
+\int \sqrt{x^2 - a^2} \, dx = \frac{1}{2} \left( x \sqrt{x^2 - a^2} - a^2 \ln \left| x + \sqrt{x^2 - a^2} \right| \right) + C
+\]
+
+Therefore, the final result is:
+\[
+\int \sqrt{x^2 - a^2} \, dx = \frac{x \sqrt{x^2 - a^2}}{2} - \frac{a^2}{2} \ln \left| x + \sqrt{x^2 - a^2} \right| + C
+\]
+
+\section*{19.}
+
+Let \( u = \tan^{-1}(x) \), then \( du = \frac{1}{1 + x^2} \, dx \) and \( e^u = e^{\tan^{-1}(x)} \):
+
+\[
+\int \frac{e^{\tan^{-1}(x)}}{1 + x^2} \, dx = \int e^u \, du
+\]
+
+\[
+= e^u + C = e^{\tan^{-1}(x)} + C
+\]
+
+
+
+\section*{20.}
+
+Let \( u = x^2 - 5 \). Then, \( du = 2x \, dx \).
+
+Thus, the integral becomes:
+
+\[
+\int 2x \cos(x^2 - 5) \, dx = \int \cos(u) \, du
+\]
+
+\[
+= \sin(u) + C
+\]
+
+Substitute \( u = x^2 - 5 \) back:
+
+\[
+= \sin(x^2 - 5) + C
+\]
+
+\section*{21.}
+
+Use the substitution \( u = x^2 + 1 \). Then, \( du = 2x \, dx \) or \( \frac{du}{2} = x \, dx \).
+
+Rewrite the integral:
+
+\[
+\int x \sqrt{x^2 + 1} \, dx = \frac{1}{2} \int \sqrt{u} \, du
+\]
+
+\[
+= \frac{1}{2} \int u^{1/2} \, du
+\]
+
+\[
+= \frac{1}{2} \cdot \frac{2}{3} u^{3/2} + C = \frac{1}{3} u^{3/2} + C
+\]
+
+Substitute back \( u = x^2 + 1 \):
+
+\[
+= \frac{1}{3} (x^2 + 1)^{3/2} + C
+\]
+
+\section*{22.}
+
+Use integration by parts where \( u = \ln(x) \) and \( dv = x^4 \, dx \). Then, \( du = \frac{1}{x} \, dx \) and \( v = \frac{x^5}{5} \).
+
+Apply integration by parts:
+
+\[
+\int x^4 \ln(x) \, dx = \ln(x) \cdot \frac{x^5}{5} - \int \frac{x^5}{5} \cdot \frac{1}{x} \, dx
+\]
+
+\[
+= \frac{x^5 \ln(x)}{5} - \frac{1}{5} \int x^4 \, dx
+\]
+
+\[
+= \frac{x^5 \ln(x)}{5} - \frac{1}{5} \cdot \frac{x^5}{5} + C
+\]
+
+\[
+= \frac{x^5 \ln(x)}{5} - \frac{x^5}{25} + C
+\]
+
+\section*{23.}
+
+Use the substitution \( u = x^2 - 1 \). Then, \( du = 2x \, dx \) or \( \frac{du}{2} = x \, dx \).
+
+Rewrite the integral:
+
+\[
+\int \frac{x}{x^2 - 1} \, dx = \frac{1}{2} \int \frac{1}{u} \, du
+\]
+
+\[
+= \frac{1}{2} \ln |u| + C
+\]
+
+Substitute back \( u = x^2 - 1 \):
+
+\[
+= \frac{1}{2} \ln |x^2 - 1| + C
+\]
+
+
+\section*{24. Population Growth}
+
+Suppose a population grows according to the function \( P(t) = P_0 e^{rt} \), where \( P_0 \) is the initial population and \( r \) is the growth rate. To find the total population increase from \( t = 0 \) to \( t = T \), we need to evaluate the integral:
+
+\[
+\int_{0}^{T} P_0 e^{rt} \, dt
+\]
+
+Since \( P_0 \) is a constant, it can be factored out of the integral:
+
+\[
+P_0 \int_{0}^{T} e^{rt} \, dt
+\]
+
+To solve this integral, use the formula for the integral of an exponential function:
+
+\[
+\int e^{rt} \, dt = \frac{e^{rt}}{r}
+\]
+
+Applying the limits from \( t = 0 \) to \( t = T \):
+
+\[
+P_0 \left[ \frac{e^{rt}}{r} \right]_{0}^{T}
+\]
+
+\[
+= P_0 \left( \frac{e^{rT}}{r} - \frac{e^{0}}{r} \right)
+\]
+
+\[
+= P_0 \left( \frac{e^{rT} - 1}{r} \right)
+\]
+
+Thus, the total population increase is:
+
+\[
+\frac{P_0 (e^{rT} - 1)}{r}
+\]
+
+\section*{25. Concentration Decay}
+
+Consider a substance whose concentration decays over time according to \( C(t) = C_0 e^{-kt} + t \). To find the total concentration of the substance from \( t = 0 \) to \( t = T \), evaluate the integral:
+
+\[
+\int_{0}^{T} \left( C_0 e^{-kt} + t \right) \, dt
+\]
+
+Split the integral into two parts:
+
+\[
+\int_{0}^{T} C_0 e^{-kt} \, dt + \int_{0}^{T} t \, dt
+\]
+
+For the first integral:
+
+\[
+C_0 \int_{0}^{T} e^{-kt} \, dt
+\]
+
+Using the formula for the integral of an exponential function:
+
+\[
+\int e^{-kt} \, dt = -\frac{e^{-kt}}{k}
+\]
+
+Applying the limits:
+
+\[
+C_0 \left[ -\frac{e^{-kt}}{k} \right]_{0}^{T}
+\]
+
+\[
+= C_0 \left( -\frac{e^{-kT}}{k} + \frac{e^{0}}{k} \right)
+\]
+
+\[
+= C_0 \left( \frac{1 - e^{-kT}}{k} \right)
+\]
+
+For the second integral:
+
+\[
+\int_{0}^{T} t \, dt = \frac{t^2}{2} \Big|_{0}^{T}
+\]
+
+\[
+= \frac{T^2}{2}
+\]
+
+Combining the results:
+
+\[
+\text{Total concentration} = C_0 \left( \frac{1 - e^{-kT}}{k} \right) + \frac{T^2}{2}
+\]
+
+\section*{26. Biomass Production}
+
+Suppose the rate of biomass production is given by \( B(t) = a t^2 + b t \), where \( a \) and \( b \) are constants. To determine the total biomass produced from \( t = 0 \) to \( t = T \), evaluate the integral:
+
+\[
+\int_{0}^{T} \left( a t^2 + b t \right) \, dt
+\]
+
+Split the integral:
+
+\[
+\int_{0}^{T} a t^2 \, dt + \int_{0}^{T} b t \, dt
+\]
+
+For the first integral:
+
+\[
+a \int_{0}^{T} t^2 \, dt = a \left[ \frac{t^3}{3} \right]_{0}^{T}
+\]
+
+\[
+= a \frac{T^3}{3}
+\]
+
+For the second integral:
+
+\[
+b \int_{0}^{T} t \, dt = b \left[ \frac{t^2}{2} \right]_{0}^{T}
+\]
+
+\[
+= b \frac{T^2}{2}
+\]
+
+Combining the results:
+
+\[
+\text{Total biomass} = a \frac{T^3}{3} + b \frac{T^2}{2}
+\]
+
+\section*{27. Drug Exposure}
+
+The concentration of a drug in the bloodstream decreases according to \( C(t) = \frac{C_0}{1 + k t} \), where \( C_0 \) and \( k \) are constants. To find the total drug exposure from \( t = 0 \) to \( t = T \), evaluate the integral:
+
+\[
+\int_{0}^{T} \frac{C_0}{1 + k t} \, dt
+\]
+
+Since \( C_0 \) is a constant, factor it out:
+
+\[
+C_0 \int_{0}^{T} \frac{1}{1 + k t} \, dt
+\]
+
+Use the substitution \( u = 1 + k t \). Then, \( du = k \, dt \) or \( dt = \frac{du}{k} \).
+
+Rewrite the integral:
+
+\[
+C_0 \int_{1}^{1 + k T} \frac{1}{u} \cdot \frac{du}{k}
+\]
+
+\[
+= \frac{C_0}{k} \int_{1}^{1 + k T} \frac{1}{u} \, du
+\]
+
+\[
+= \frac{C_0}{k} \left[ \ln u \right]_{1}^{1 + k T}
+\]
+
+\[
+= \frac{C_0}{k} \left( \ln (1 + k T) - \ln 1 \right)
+\]
+
+\[
+= \frac{C_0}{k} \ln (1 + k T)
+\]
+
+
+\end{document}
