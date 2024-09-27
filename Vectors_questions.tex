@@ -1,0 +1,133 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Mathematical and Numerical Methods for Biologists}
+\fancyhead[R]{BB 523}
+\fancyfoot[C]{\thepage}
+
+\title{Practice Questions on  Coordinate systems and Vectors}
+\author{}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\begin{enumerate}
+
+    \item For each of the following, find the vector, its magnitude, and determine if the vector is a unit vector:
+    \begin{enumerate}
+        \item The line segment from \( (-9, 2) \) to \( (4, -1) \).
+        \item The line segment from \( (4, 5, 6) \) to \( (4, 6, 6) \).
+        \item The position vector for the point \( (-3, 2, 10) \).
+        
+    \end{enumerate}
+    
+    \item Given the vector \( \vec{v} = \langle 6, -4, 0 \rangle \) starts at the point \( P = (-2, 5, -1) \), find the point where the vector ends.
+    \item Given \( \vec{u} = 8\hat{i} - \hat{j} + 3\hat{k} \) and \( \vec{v} = 7\hat{j} - 4\hat{k} \), compute each of the following:
+
+    \begin{enumerate}
+        \item \( -3\vec{v} \)
+        \item \( 12\vec{u} + \vec{v} \)
+        \item \( \|\ -9\vec{v} - 2\vec{u} \| \)
+    \end{enumerate}
+    \item Determine if \( \vec{v} = 9\hat{i} - 6\hat{j} - 24\hat{k} \) and \( \vec{w} = \langle -15, 10, 40 \rangle \) are parallel vectors.?
+    \item For problems a – c, determine the dot product \( \vec{a} \cdot \vec{b} \).
+    \begin{enumerate}
+        \item Given \( \vec{a} = \langle 9, 5, -4, 2 \rangle \) and \( \vec{b} = \langle -3, -2, 7, -1 \rangle \).
+        \item Given \( \vec{a} = \langle 0, 4, -2 \rangle \) and \( \vec{b} = 2\hat{i} - \hat{j} + 7\hat{k} \).
+        \item Given \( \|\vec{a}\| = 5 \), \( \|\vec{b}\| = 3/7 \), and the angle between the two vectors is \( \theta = \frac{\pi}{12} \).
+    \end{enumerate}
+
+    \item If \( \vec{w} = \langle 3, -1, 5 \rangle \) and \( \vec{v} = \langle 0, 4, -2 \rangle \), compute \( \vec{v} \times \vec{w} \).
+    
+    \item If \( \vec{w} = \langle 1, 6, -8 \rangle \) and \( \vec{v} = \langle 4, -2, -1 \rangle \), compute \( \vec{w} \times \vec{v} \).
+    
+    \item Find a vector that is orthogonal to the plane containing the points \( P = (3, 0, 1) \), \( Q = (4, -2, 1) \), and \( R = (5, 3, -1) \).
+    
+    \item Are the vectors \( \vec{u} = \langle 1, 2, -4 \rangle \), \( \vec{v} = \langle -5, 3, -7 \rangle \), and \( \vec{w} = \langle -1, 4, 2 \rangle \) in the same plane?
+
+    \item Give the projection of \( P = (3, -4, 6) \) onto the three coordinate planes.
+
+    \item For problems a \& b, convert the Cartesian coordinates for the point into Cylindrical coordinates.
+
+    \begin{enumerate}
+            \item \( (4, -5, 2) \)
+    
+            \item \( (-4, -1, 8) \)
+    \end{enumerate}
+
+    \item Convert the following equation written in Cartesian coordinates into an equation in Cylindrical coordinates:
+
+\[
+x^3 + 2x^2 - 6z = 4 - 2y^2
+\]
+    \item For problems a \& b, convert the equation written in Cylindrical coordinates into an equation in Cartesian coordinates.
+
+    \begin{enumerate}
+    
+        \item \( z r = 2 - r^2 \)
+    
+        \item \( 4 \sin(\theta) - 2 \cos(\theta) = r/ z \)
+    \end{enumerate}
+
+
+
+
+
+    \item For problems a \& b, convert the Cartesian coordinates for the point into Spherical coordinates.
+
+    \begin{enumerate}
+        \item \( (3, -4, 1) \)
+    
+        \item \( (-2, -1, -7) \)
+    \end{enumerate}
+
+    \item Convert the Cylindrical coordinates for the point \( (2, 0.345, -3) \) into Spherical coordinates.
+
+    \item Convert the following equation written in Cartesian coordinates into an equation in Spherical coordinates:
+
+\[
+x^2 + y^2 = 4x + z - 2
+\]
+
+    \item For problems a \& b convert the equation written in Spherical coordinates into an equation in Cartesian coordinates.
+
+    \begin{enumerate}
+        \item \( \rho^2 = 3 - \cos \phi \)
+    
+        \item \( \csc \phi = 2 \cos \theta + 4 \sin \theta \)
+    \end{enumerate}
+
+
+
+
+
+
+    \item **Molecular Geometry**: Given the positions of three atoms in a molecule at \( A(1, 2, 3) \), \( B(4, -1, 2) \), and \( C(-2, 0, 5) \):
+    \begin{enumerate}
+        \item Calculate the distance between atoms \( A \) and \( B \).
+        \item Determine the midpoint of the segment connecting \( B \) and \( C \).
+    \end{enumerate}
+
+    \item **Blood Vessel Modeling**: A blood vessel can be modeled as a cylinder with radius 3 units and height 10 units. 
+    \begin{enumerate}
+        \item Write the equation of the cylinder in cylindrical coordinates.
+        \item Calculate the volume of the blood vessel.
+    \end{enumerate}
+
+    \item **Cell Interaction**: Two cells are located at positions given in spherical coordinates: Cell 1 at \( (5, \frac{\pi}{4}, \frac{\pi}{6}) \) and Cell 2 at \( (7, \frac{\pi}{3}, \frac{\pi}{2}) \). 
+    \begin{enumerate}
+        \item Convert both positions to Cartesian coordinates.
+        \item Calculate the distance between the two cells.
+    \end{enumerate}
+
+\end{enumerate}
+\end{document}
