@@ -1,0 +1,467 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Mathematical and Numerical Methods for Biologists}
+\fancyhead[R]{BB 523}
+\fancyfoot[C]{\thepage}
+
+\title{Practice Questions on  Coordinate systems and Vectors: Solutions}
+\author{}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+
+\section*{1. Vector, Magnitude, and Unit Vector Check}
+
+(a) Line segment from $(-9, 2)$ to $(4, -1)$:
+\[
+\vec{v} = (4 - (-9), -1 - 2) = (13, -3)
+\]
+\[
+|\vec{v}| = \sqrt{13^2 + (-3)^2} = \sqrt{169 + 9} = \sqrt{178} \approx 13.35
+\]
+Not a unit vector.
+
+(b) Line segment from $(4, 5, 6)$ to $(4, 6, 6)$:
+\[
+\vec{v} = (4 - 4, 6 - 5, 6 - 6) = (0, 1, 0)
+\]
+\[
+|\vec{v}| = \sqrt{0^2 + 1^2 + 0^2} = 1
+\]
+It is a unit vector.
+
+(c) Position vector for the point $(-3, 2, 10)$:
+\[
+\vec{v} = (-3, 2, 10)
+\]
+\[
+|\vec{v}| = \sqrt{(-3)^2 + 2^2 + 10^2} = \sqrt{9 + 4 + 100} = \sqrt{113} \approx 10.63
+\]
+Not a unit vector.
+
+\section*{2. Find the ending point for $\vec{v} = \langle 6, -4, 0 \rangle$ starting from $P = (-2, 5, -1)$}
+\[
+\text{Ending Point} = (-2 + 6, 5 - 4, -1 + 0) = (4, 1, -1)
+\]
+Ending Point: $(4, 1, -1)$.
+
+\section*{3. Vector Operations}
+
+Let $\vec{u} = 8\hat{i} - \hat{j} + 3\hat{k}$ and $\vec{v} = 7\hat{j} - 4\hat{k}$:
+
+(a) $-3\vec{v}$:
+\[
+-3\vec{v} = -3(7\hat{j} - 4\hat{k}) = -21\hat{j} + 12\hat{k}
+\]
+
+(b) $12\vec{u} + \vec{v}$:
+\[
+12\vec{u} = 12(8\hat{i} - \hat{j} + 3\hat{k}) = 96\hat{i} - 12\hat{j} + 36\hat{k}
+\]
+\[
+12\vec{u} + \vec{v} = (96\hat{i} - 12\hat{j} + 36\hat{k}) + (7\hat{j} - 4\hat{k}) = 96\hat{i} - 5\hat{j} + 32\hat{k}
+\]
+
+(c) $\| -9\vec{v} - 2\vec{u} \|$:
+\[
+-9\vec{v} = -9(7\hat{j} - 4\hat{k}) = -63\hat{j} + 36\hat{k}
+\]
+\[
+-2\vec{u} = -2(8\hat{i} - \hat{j} + 3\hat{k}) = -16\hat{i} + 2\hat{j} - 6\hat{k}
+\]
+\[
+-9\vec{v} - 2\vec{u} = (-16\hat{i} + 2\hat{j} - 6\hat{k}) + (-63\hat{j} + 36\hat{k}) = -16\hat{i} - 61\hat{j} + 30\hat{k}
+\]
+\[
+\| -16\hat{i} - 61\hat{j} + 30\hat{k} \| = \sqrt{(-16)^2 + (-61)^2 + (30)^2} = \sqrt{256 + 3721 + 900} = \sqrt{4877} \approx 69.82
+\]
+
+\section*{4. Are Vectors Parallel?}
+
+For $\vec{v} = 9\hat{i} - 6\hat{j} - 24\hat{k}$ and $\vec{w} = \langle -15, 10, 40 \rangle$:
+
+\[
+\frac{-15}{9} = \frac{10}{-6} = \frac{40}{-24} = -\frac{5}{3}
+\]
+Since the ratios are equal, the vectors are parallel.
+
+\section*{5. Dot Product Calculations}
+
+(a) Given $\vec{a} = \langle 9, 5, -4, 2 \rangle$ and $\vec{b} = \langle -3, -2, 7, -1 \rangle$:
+\[
+\vec{a} \cdot \vec{b} = (9)(-3) + (5)(-2) + (-4)(7) + (2)(-1) = -27 - 10 - 28 - 2 = -67
+\]
+
+(b) Given $\vec{a} = \langle 0, 4, -2 \rangle$ and $\vec{b} = 2\hat{i} - \hat{j} + 7\hat{k}$:
+\[
+\vec{a} \cdot \vec{b} = (0)(2) + (4)(-1) + (-2)(7) = 0 - 4 - 14 = -18
+\]
+
+(c) Given $\|\vec{a}\| = 5$, $\|\vec{b}\| = \frac{3}{7}$, and $\theta = \frac{\pi}{12}$:
+\[
+\vec{a} \cdot \vec{b} = \|\vec{a}\|\|\vec{b}\|\cos(\theta) = 5 \times \frac{3}{7} \times \cos\left(\frac{\pi}{12}\right)
+\]
+Approximating:
+\[
+\vec{a} \cdot \vec{b} \approx 5 \times \frac{3}{7} \times 0.9659 \approx 2.071
+\]
+
+\section*{6. Cross Product Calculation}
+
+For $\vec{w} = \langle 3, -1, 5 \rangle$ and $\vec{v} = \langle 0, 4, -2 \rangle$:
+\[
+\vec{v} \times \vec{w} = \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ 0 & 4 & -2 \\ 3 & -1 & 5 \end{vmatrix}
+= \hat{i}(4 \times 5 - (-2) \times (-1)) - \hat{j}(0 \times 5 - (-2) \times 3) + \hat{k}(0 \times (-1) - 4 \times 3)
+\]
+\[
+= \hat{i}(20 - 2) - \hat{j}(0 + 6) + \hat{k}(0 - 12) = 18\hat{i} - 6\hat{j} - 12\hat{k}
+\]
+Result: $\vec{v} \times \vec{w} = \langle 18, -6, -12 \rangle$.
+
+\section*{7. Cross Product Calculation}
+
+For $\vec{w} = \langle 1, 6, -8 \rangle$ and $\vec{v} = \langle 4, -2, -1 \rangle$:
+\[
+\vec{w} \times \vec{v} = \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ 1 & 6 & -8 \\ 4 & -2 & -1 \end{vmatrix}
+= \hat{i}(6 \times (-1) - (-8) \times (-2)) - \hat{j}(1 \times (-1) - (-8) \times 4) + \hat{k}(1 \times (-2) - 6 \times 4)
+\]
+\[
+= \hat{i}(-6 - 16) - \hat{j}(-1 + 32) + \hat{k}(-2 - 24) = -22\hat{i} - 31\hat{j} - 26\hat{k}
+\]
+Result: $\vec{w} \times \vec{v} = \langle -22, -31, -26 \rangle$.
+
+\section*{8. Find a Vector Orthogonal to a Plane}
+
+For points $P = (3, 0, 1)$, $Q = (4, -2, 1)$, and $R = (5, 3, -1)$:
+\[
+\vec{PQ} = \langle 1, -2, 0 \rangle, \quad \vec{PR} = \langle 2, 3, -2 \rangle
+\]
+\[
+\vec{PQ} \times \vec{PR} = \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ 1 & -2 & 0 \\ 2 & 3 & -2 \end{vmatrix}
+= \hat{i}(3 \times (-2)) - \hat{j}(1 \times (-2)) + \hat{k}(1 \times 3 - (-2) \times 2)
+\]
+\[
+= 4\hat{i} + 2\hat{j} + 7\hat{k}
+\]
+The orthogonal vector is $\langle 4, 2, 7 \rangle$.
+
+\section*{9. Are Vectors in the Same Plane?}
+
+For $\vec{u} = \langle 1, 2, -4 \rangle$, $\vec{v} = \langle -5, 3, -7 \rangle$, and $\vec{w} = \langle -1, 4, 2 \rangle$:
+\[
+\vec{v} \times \vec{w} = \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ -5 & 3 & -7 \\ -1 & 4 & 2 \end{vmatrix}
+= \hat{i}(3 \times 2 - (-7) \times 4) - \hat{j}((-5) \times 2 - (-7) \times (-1)) + \hat{k}((-5) \times 4 - 3 \times (-1))
+\]
+\[
+= \hat{i}(6 + 28) - \hat{j}(-10 - 7) + \hat{k}(-20 + 3) = 34\hat{i} + 17\hat{j} - 17\hat{k}
+\]
+\[
+\vec{u} \cdot (34\hat{i} + 17\hat{j} - 17\hat{k}) = 1(34) + 2(17) + (-4)(-17) = 34 + 34 + 68 = 136
+\]
+Since the scalar triple product is nonzero, the vectors are not coplanar.
+
+\section*{10. Projection of Point onto Coordinate Planes}
+
+For point $P = (3, -4, 6)$:
+
+- Projection onto the $xy$-plane: $(3, -4, 0)$
+- Projection onto the $yz$-plane: $(0, -4, 6)$
+- Projection onto the $zx$-plane: $(3, 0, 6)$
+
+
+% Question 11
+\section*{11. Convert Cartesian coordinates to Cylindrical coordinates}
+In cylindrical coordinates:
+\[
+r = \sqrt{x^2 + y^2}, \quad \theta = \tan^{-1}\left(\frac{y}{x}\right), \quad z = z
+\]
+\subsection*{(a) (4, -5, 2)}
+\[
+r = \sqrt{4^2 + (-5)^2} = \sqrt{16 + 25} = \sqrt{41}, \quad \theta = \tan^{-1}\left(\frac{-5}{4}\right) \approx -0.896, \quad z = 2
+\]
+The cylindrical coordinates are \((\sqrt{41}, -0.896, 2)\).
+
+\subsection*{(b) (-4, -1, 8)}
+\[
+r = \sqrt{(-4)^2 + (-1)^2} = \sqrt{16 + 1} = \sqrt{17}, \quad \theta = \tan^{-1}\left(\frac{-1}{-4}\right) \approx 0.245, \quad z = 8
+\]
+The cylindrical coordinates are \((\sqrt{17}, 0.245, 8)\).
+
+% Question 12
+\section*{12. Convert equation from Cartesian to Cylindrical}
+Given the equation:
+\[
+x^3 + 2x^2 - 6z = 4 - 2y^2
+\]
+In cylindrical coordinates:
+\[
+x = r \cos(\theta), \quad y = r \sin(\theta)
+\]
+Substitute into the given equation:
+\[
+(r \cos(\theta))^3 + 2(r \cos(\theta))^2 - 6z = 4 - 2(r \sin(\theta))^2
+\]
+Simplifying:
+\[
+r^3 \cos^3(\theta) + 2r^2  - 6z = 4 
+\]
+
+% Question 13
+\section*{13. Convert equation from Cylindrical to Cartesian coordinates}
+\subsection*{(a) \( zr = 2 - r^2 \)}
+In Cartesian coordinates:
+\[
+r = \sqrt{x^2 + y^2}, \quad z = z
+\]
+The equation becomes:
+\[
+z\sqrt{x^2 + y^2} = 2 - (x^2 + y^2)
+\]
+
+\subsection*{(b) \( 4 \sin(\theta) - 2 \cos(\theta) = \frac{r}{z} \)}
+Using \(\sin(\theta) = \frac{y}{r}\) and \(\cos(\theta) = \frac{x}{r}\), the equation becomes:
+\[
+4\left(\frac{y}{r}\right) - 2\left(\frac{x}{r}\right) = \frac{r}{z}
+\]
+Multiplying by \(r\):
+\[
+4y - 2x = \frac{(x^2 + y^2)}{z}
+\]
+
+% Question 14
+\section*{14. Convert Cartesian coordinates to Spherical coordinates}
+In spherical coordinates:
+\[
+\rho = \sqrt{x^2 + y^2 + z^2}, \quad \theta = \tan^{-1}\left(\frac{y}{x}\right), \quad \phi = \cos^{-1}\left(\frac{z}{\rho}\right)
+\]
+
+\subsection*{(a) (3, -4, 1)}
+
+Given the Cartesian coordinates \((x, y, z) = (3, -4, 1)\), we convert to spherical coordinates \((\rho, \theta, \phi)\) as follows:
+
+\[
+x = 3, \quad y = -4, \quad z = 1
+\]
+
+### Step 1: Determine \(\rho\)
+\[
+\rho = \sqrt{x^2 + y^2 + z^2} = \sqrt{3^2 + (-4)^2 + 1^2} = \sqrt{9 + 16 + 1} = \sqrt{26}
+\]
+
+### Step 2: Determine \(\phi\)
+\[
+\cos\phi = \frac{z}{\rho} = \frac{1}{\sqrt{26}}, \quad \phi = \cos^{-1}\left(\frac{1}{\sqrt{26}}\right) \approx 1.3734 \, \text{radians}
+\]
+
+
+Using the formula for \(\theta\) from \(x\):
+\[
+\cos\theta = \frac{x}{\rho \sin\phi} = \frac{3}{\sqrt{26} \sin(1.3734)} = 0.6
+\]
+Thus:
+\[
+\theta_1 = \cos^{-1}(0.6) \approx 0.9273 \, \text{radians}
+\]
+Since the point is in the fourth quadrant (as observed from the \(x\) and \(y\) coordinates), we adjust \(\theta\) accordingly:
+\[
+\theta_2 = 2\pi - 0.9273 \approx 5.3559 \, \text{radians}
+\]
+
+
+The spherical coordinates of the point are:
+\[
+\left( \sqrt{26}, 5.3559, 1.3734 \right)
+\]
+
+
+\subsection*{(b) (-2, -1, -7)}
+
+Given the Cartesian coordinates \((x, y, z) = (-2, -1, -7)\), we convert to spherical coordinates \((\rho, \theta, \phi)\).
+
+
+\[
+\rho = \sqrt{x^2 + y^2 + z^2} = \sqrt{(-2)^2 + (-1)^2 + (-7)^2} = \sqrt{4 + 1 + 49} = \sqrt{54}
+\]
+
+
+\[
+\cos\phi = \frac{z}{\rho} = \frac{-7}{\sqrt{54}}, \quad \phi = \cos^{-1}\left(\frac{-7}{\sqrt{54}}\right) \approx 2.8324 \, \text{radians}
+\]
+
+
+
+Using the \(y\) conversion formula:
+\[
+\sin\theta = \frac{y}{\rho \sin\phi} = \frac{-1}{\sqrt{54} \sin(2.8324)} = -0.4472
+\]
+Thus:
+\[
+\theta_1 = \sin^{-1}(-0.4472) \approx -0.4636 \, \text{radians}
+\]
+Since the point is in the third quadrant, adjust \(\theta\):
+\[
+\theta_2 = \pi + 0.4636 \approx 3.6052 \, \text{radians}
+\]
+
+
+\[
+\left( \sqrt{54}, 3.6052, 2.8324 \right)
+\]
+
+
+% Question 15
+\section*{15. Convert Cylindrical coordinates to Spherical coordinates}
+For the point \((2, 0.345, -3)\):
+\[
+\rho = \sqrt{r^2 + z^2} = \sqrt{2^2 + (-3)^2} = \sqrt{13}, \quad \phi = \cos^{-1}\left(\frac{-3}{\sqrt{13}}\right) \approx 2.5536
+\]
+The spherical coordinates are \((\sqrt{13}, 0.345, 2.5536)\).
+
+% Question 16
+\section*{16. Convert equation from Cartesian to Spherical}
+For the equation \(x^2 + y^2 = 4x + z - 2\):
+In spherical coordinates:
+\[
+x = \rho \sin(\phi) \cos(\theta), \quad y = \rho \sin(\phi) \sin(\theta), \quad z = \rho \cos(\phi)
+\]
+Substitute into the equation:
+\[
+\rho^2 \sin^2(\phi) = 4\rho \sin(\phi) \cos(\theta) + \rho \cos(\phi) - 2
+\]
+
+% Question 17
+\section*{17. Convert equation from Spherical to Cartesian coordinates}
+\subsection*{(a) \( \rho^2 = 3 - \cos \phi \)}
+In Cartesian coordinates:
+\[
+\rho^2 = x^2 + y^2 + z^2, \quad \cos(\phi) = \frac{z}{\rho}
+\]
+So, the equation becomes:
+\[
+x^2 + y^2 + z^2 = 3 - \frac{z}{\rho}
+\]
+{{{{\left( {{x^2} + {y^2} + {z^2}} \right)}^{\frac{3}{2}}} = 3\sqrt {{x^2} + {y^2} + {z^2}}  - z}}
+
+\subsection*{(b) \( \csc(\phi) = 2 \cos(\theta) + 4 \sin(\theta) \)}
+We start with the conversion formulas:
+\[
+x = \rho \sin\phi \cos\theta, \quad y = \rho \sin\phi \sin\theta, \quad z = \rho \cos\phi, \quad \rho^2 = x^2 + y^2 + z^2
+\]
+
+
+
+We are given:
+\[
+\frac{1}{\sin\phi} = 2\cos\theta + 4\sin\theta
+\]
+Multiplying by \(\sin\phi\) on both sides, we get:
+\[
+1 = 2\sin\phi\cos\theta + 4\sin\phi\sin\theta
+\]
+
+
+Multiplying the equation by \(\rho\):
+\[
+\rho = 2\rho\sin\phi\cos\theta + 4\rho\sin\phi\sin\theta
+\]
+This can be rewritten using the spherical-to-Cartesian conversion formulas:
+\[
+\rho = 2x + 4y
+\]
+
+
+
+Finally, using \(\rho = \sqrt{x^2 + y^2 + z^2}\), the equation becomes:
+\[
+\sqrt{x^2 + y^2 + z^2} = 2x + 4y
+\]
+
+% Question 18
+\section*{18. Molecular Geometry}
+Given the points \(A(1, 2, 3)\), \(B(4, -1, 2)\), and \(C(-2, 0, 5)\):
+
+\subsection*{(a) Distance between A and B:}
+\[
+d = \sqrt{(4 - 1)^2 + (-1 - 2)^2 + (2 - 3)^2} = \sqrt{9 + 9 + 1} = \sqrt{19}
+\]
+
+\subsection*{(b) Midpoint of BC:}
+\[
+M = \left( \frac{4 + (-2)}{2}, \frac{-1 + 0}{2}, \frac{2 + 5}{2} \right) = (1, -0.5, 3.5)
+\]
+
+% Question 19
+\section*{19. Blood Vessel Modeling}
+\subsection*{(a) Equation of the cylinder:}
+In cylindrical coordinates, a cylinder with radius 3 and height 10 is represented by:
+\[
+r = 3, \quad 0 \leq z \leq 10
+\]
+
+\subsection*{(b) Volume of the blood vessel:}
+The volume of the cylinder is:
+\[
+V = \pi r^2 h = \pi (3^2)(10) = 90\pi \text{ cubic units}
+\]
+
+% Question 20
+\section*{20. Cell Interaction}
+\subsection*{(a) Convert to Cartesian coordinates:}
+
+For Cell 1 \((5, \frac{\pi}{4}, \frac{\pi}{6})\):
+\[
+x = 5 \sin\left( \frac{\pi}{6} \right) \cos\left( \frac{\pi}{4} \right), \quad y = 5 \sin\left( \frac{\pi}{6} \right) \sin\left( \frac{\pi}{4} \right), \quad z = 5 \cos\left( \frac{\pi}{6} \right)
+\]
+\[
+x \approx 1.77, \quad y \approx 1.77, \quad z = 4.33
+\]
+
+For Cell 2 \((7, \frac{\pi}{3}, \frac{\pi}{2})\):
+\[
+x = 7 \sin\left( \frac{\pi}{2} \right) \cos\left( \frac{\pi}{3} \right), \quad y = 7 \sin\left( \frac{\pi}{2} \right) \sin\left( \frac{\pi}{3} \right), \quad z = 7 \cos\left( \frac{\pi}{2} \right)
+\]
+\[
+x \approx 3.5, \quad y \approx 6.06, \quad z = 0
+\]
+
+\subsection*{(b) Distance between the two cells:}
+\[
+d = \sqrt{(1.77 - 3.5)^2 + (1.77 - 6.06)^2 + (4.33 - 0)^2} \approx 6.11
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
