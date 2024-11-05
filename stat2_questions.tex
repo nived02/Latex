@@ -1,0 +1,115 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Mathematical and Numerical Methods for Biologists}
+\fancyhead[R]{BB 523}
+\fancyfoot[C]{\thepage}
+
+\title{Practice Questions on Statistics II}
+\author{}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+
+\begin{enumerate}
+    \item A lab experiment involves testing a treatment on a population where the probability of success is 0.3. If 10 trials are conducted, calculate the probability of getting exactly 3 successes. (Hint: Use the binomial probability formula, $P (X = k) = \binom{n}{k} p^k (1 - p)^{n-k}$).
+
+    \item A biologist observes an average of 2.5 rare plants per 100 m² in a certain habitat. What is the probability of finding exactly 3 rare plants in a 100 m² area? (Hint: Use the Poisson probability formula, $P (X = k) = \frac{\lambda^k e^{-\lambda}}{k!}$).
+
+    \item Given that the heights of a plant species follow a normal distribution with a mean of 15 cm and a standard deviation of 2 cm, what percentage of plants have a height between 13 cm and 17 cm? (Hint: Use the properties of the normal distribution and z-scores).
+
+    \item If the time until the next flowering of a plant species follows an exponential distribution with a mean of 3 days, what is the probability that the next flowering will occur within 2 days? (Hint: The probability density function for an exponential distribution is $f (x; \lambda) = \lambda e^{-\lambda x}$, where $\lambda = \frac{1}{\text{mean}}$).
+
+    \item Describe a scenario where you would prefer to model data with a Poisson distribution rather than a Binomial distribution. Explain your reasoning.
+
+    \item In a sample of 200 bacteria from a certain population, 60 are found to be resistant to an antibiotic. Test at a 5\% significance level if the true proportion of antibiotic-resistant bacteria is 0.25. (Hint: Calculate the z-score and compare it to the critical value for the 5\% level).
+
+    \item Two different species of plants are being compared for average growth rates. Species A has a mean growth rate of 5 cm/week (sample size 10, standard deviation 1.2), and Species B has a mean growth rate of 4.2 cm/week (sample size 12, standard deviation 1.1). Test if there is a significant difference in growth rates at a 5\% significance level. (Hint: Use the two-sample t-test formula).
+
+    \item Using Excel, find the z-score for a sample mean of 8, with a population mean of 6 and standard deviation of 1.5. (Provide the Excel formula you used for this calculation).
+
+    \item After conducting a hypothesis test for the mean weight of two different groups of animals, a p-value of 0.03 is obtained. At a 5\% significance level, interpret what this p-value means for the test result.
+
+    \item Explain why a t-test might be preferred over a z-test when testing the mean height of plants in a small sample.
+
+    \item In a population of bacteria, 30\% are resistant to a certain antibiotic. If you randomly select 10 bacteria, what is the probability that exactly 3 of them are resistant? Let $X$ be the number of resistant bacteria. $X$ follows a binomial distribution with parameters $n = 10$ and $p = 0.3$.
+
+    \item In a population of cells, 20\% are undergoing mitosis at any given time. If you randomly sample 8 cells, what is the probability that exactly 2 of them are undergoing mitosis? Let $X$ be the number of cells undergoing mitosis. $X$ follows a binomial distribution with $n = 8$ and $p = 0.2$.
+
+    \item The average number of mutations in a gene per generation is 2. What is the probability that in a given generation, there will be exactly 4 mutations? Let $X$ be the number of mutations. $X$ follows a Poisson distribution with parameter $\lambda = 2$.
+
+    \item The number of times a certain enzyme catalyzes a reaction in an hour follows a Poisson distribution with an average rate of 3 reactions per hour. What is the probability that the enzyme catalyzes exactly 5 reactions in an hour? Let $X$ be the number of reactions. $X$ follows a Poisson distribution with $\lambda = 3$.
+
+    \item A man can send an email on average 2 emails per hour. What is the probability that the man sends no email in a given hour? Assume mean $\lambda = 2$. The formula for the required probability is given by $P(X = x) = \frac{\lambda^x e^{-\lambda}}{x!}$.
+
+    \item The weights of a species of fish are normally distributed with a mean of 500 grams and a standard deviation of 50 grams. What is the probability that a randomly selected fish weighs between 450 and 550 grams? Let $X$ be the weight of the fish. $X$ follows a normal distribution with $\mu = 500$ and $\sigma = 50$.
+
+    \item The length of a certain species of worm is normally distributed with a mean of 10 cm and a standard deviation of 2 cm. What is the probability that a randomly selected worm is longer than 12 cm? Let $X$ be the length of the worm. $X$ follows a normal distribution with $\mu = 10$ and $\sigma = 2$.
+
+    \item The time between successive cell divisions in a culture follows an exponential distribution with a mean of 30 minutes. What is the probability that the time between two divisions is less than 20 minutes? Let $X$ be the time between divisions. $X$ follows an exponential distribution with $\lambda = \frac{1}{30}$.
+
+    \item Assume that you usually get 2 phone calls per hour. Calculate the probability that a phone call will come within the next hour. Given that you expect one phone call every half hour, take $\lambda = 0.5$.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

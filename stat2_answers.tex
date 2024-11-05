@@ -1,0 +1,165 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Mathematical and Numerical Methods for Biologists}
+\fancyhead[R]{BB 523}
+\fancyfoot[C]{\thepage}
+
+\title{Solutions of Statistics II}
+\author{}
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+    
+\begin{enumerate}
+    \item The probability of getting exactly 3 successes in 10 trials is given by the binomial formula:
+    \[
+    P(X = 3) = \binom{10}{3} (0.3)^3 (0.7)^{7} \approx 0.2668
+    \]
+
+    \item Using the Poisson formula with $\lambda = 2.5$:
+    \[
+    P(X = 3) = \frac{(2.5)^3 e^{-2.5}}{3!} \approx 0.2138
+    \]
+
+    \item To find the percentage of plants with a height between 13 cm and 17 cm, calculate the z-scores:
+    \[
+    z_1 = \frac{13 - 15}{2} = -1, \quad z_2 = \frac{17 - 15}{2} = 1
+    \]
+    The percentage is approximately 68.27\% (from standard normal distribution tables).
+
+    \item For an exponential distribution with mean 3 days, the rate $\lambda = \frac{1}{3}$:
+    \[
+    P(X < 2) = 1 - e^{-\frac{2}{3}} \approx 0.4866
+    \]
+
+    \item A Poisson distribution is preferred when modeling the number of events in a fixed interval, especially when events are rare and occur independently, as opposed to a fixed number of trials in the binomial distribution.
+
+    \item Using the formula for the z-score for proportions:
+    \[
+    z = \frac{0.3 - 0.25}{\sqrt{\frac{0.25 \cdot 0.75}{200}}} \approx 1.1547
+    \]
+    With a 5\% significance level, the z-critical value is 1.96. Since 1.1547 < 1.96, we do not reject the null hypothesis.
+
+    \item Calculate the t-score:
+    \[
+    t = \frac{5 - 4.2}{\sqrt{\frac{1.2^2}{10} + \frac{1.1^2}{12}}} \approx 1.77
+    \]
+    With degrees of freedom approximately 20, the critical t-value for a 5\% significance level is about 2.086. Since 1.77 < 2.086, we do not reject the null hypothesis.
+
+    \item The z-score in Excel is calculated using:
+    \[
+    = \frac{8 - 6}{1.5} = 1.33
+    \]
+
+    \item A p-value of 0.03 at a 5\% significance level means that the result is statistically significant, as the p-value is less than 0.05. We reject the null hypothesis.
+
+    \item A t-test is preferred over a z-test in small samples because it accounts for sample variability when the population standard deviation is unknown.
+
+    \item For a binomial distribution with $n = 10$ and $p = 0.3$:
+    \[
+    P(X = 3) = \binom{10}{3} (0.3)^3 (0.7)^{7} \approx 0.2668
+    \]
+
+    \item For a binomial distribution with $n = 8$ and $p = 0.2$:
+    \[
+    P(X = 2) = \binom{8}{2} (0.2)^2 (0.8)^{6} \approx 0.2936
+    \]
+
+    \item Using the Poisson formula with $\lambda = 2$:
+    \[
+    P(X = 4) = \frac{2^4 e^{-2}}{4!} \approx 0.0902
+    \]
+
+    \item For a Poisson distribution with $\lambda = 3$:
+    \[
+    P(X = 5) = \frac{3^5 e^{-3}}{5!} \approx 0.1008
+    \]
+
+    \item Using the Poisson formula with $\lambda = 2$:
+    \[
+    P(X = 0) = \frac{2^0 e^{-2}}{0!} = e^{-2} \approx 0.1353
+    \]
+
+    \item For a normal distribution with $\mu = 500$ and $\sigma = 50$:
+    \[
+    z_1 = \frac{450 - 500}{50} = -1, \quad z_2 = \frac{550 - 500}{50} = 1
+    \]
+    The probability is approximately 68.27\%.
+
+    \item For a normal distribution with $\mu = 10$ and $\sigma = 2$:
+    \[
+    z = \frac{12 - 10}{2} = 1
+    \]
+    The probability that a worm is longer than 12 cm is approximately 15.87\%.
+
+    \item For an exponential distribution with $\lambda = \frac{1}{30}$:
+    \[
+    P(X < 20) = 1 - e^{-\frac{20}{30}} \approx 0.4866
+    \]
+
+    \item For an exponential distribution with $\lambda = 0.5$:
+    \[
+    P(X < 1) = 1 - e^{-0.5} \approx 0.3935
+    \]
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
